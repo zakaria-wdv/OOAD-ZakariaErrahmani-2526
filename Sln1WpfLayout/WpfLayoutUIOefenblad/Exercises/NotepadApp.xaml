@@ -16,6 +16,27 @@
         <Frame x:Name="fraAssignment" Grid.Row="0" Grid.Column="0" Background="#eeeeee" />
         <Border Background="White" BorderBrush="#6B6CB0" BorderThickness="1" Grid.Row="1" Margin="10" Height="200" Width="600">
             <!-- TODO: PAS HIERONDER DE XAML AAN -->
+            <Grid Background="#FFF3EBEB">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame x:Name="frmMain" Grid.Row="0" NavigationUIVisibility="Hidden" Margin="5,10" Background="White"/>
+                <Frame x:Name="frm1" Grid.Row="1" NavigationUIVisibility="Hidden" Margin="5,10" Background="White"/>
+                <Frame x:Name="frm2" Grid.Row="2" NavigationUIVisibility="Hidden" Margin="10" Background="White"/>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="0,0,20,0">
+                </StackPanel>
+                <DockPanel LastChildFill="True">
+                    ...
+                    <StatusBar DockPanel.Dock="Bottom">
+                        <StatusBarItem Padding="10,5">
+                            <TextBlock Text="all ready" FontSize="10" />
+                        </StatusBarItem>
+                    </StatusBar>
+                    <Grid></Grid>
+                </DockPanel>
+            </Grid>
         </Border>
     </Grid>
 </Page>

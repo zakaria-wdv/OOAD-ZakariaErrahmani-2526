@@ -16,6 +16,42 @@
         <Frame x:Name="fraAssignment" Grid.Row="0" Grid.Column="0" Background="#eeeeee" />
         <Border Background="#EEFDEF" BorderBrush="#6B6CB0" BorderThickness="1" Padding="12" Margin="20" Grid.Row="1">
             <!-- TODO: PAS HIERONDER DE XAML AAN -->
+            <TabControl SelectedIndex="2" >
+                    <TabItem Header="Account" Padding="10,5">
+                        <Grid Margin="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Content="E-mail:" Margin="0,0,20,20" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" Height="34" VerticalContentAlignment="Center" Margin="0,0,0,20"/>
+                            <Label Grid.Row="1" Grid.Column="0" Content="Wachtwoord:" Margin="0,0,20,0" VerticalAlignment="Center"/>
+                            <PasswordBox Grid.Row="1" Grid.Column="1" Height="34" VerticalContentAlignment="Center"/>
+                            <Button Grid.Row="2" Grid.Column="1" Content="Wijzigen" Width="120" Height="40" HorizontalAlignment="Right" Margin="0,20,0,0"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem  Header="Voorkeuren" Margin="0" Padding="10,5">
+                    <StackPanel Orientation="Vertical">
+                        <CheckBox Margin="10">NieuwsBrief Ontvangen</CheckBox>
+                        <CheckBox Margin="10">Donkere Modus</CheckBox>
+                        <CheckBox Margin="10">Meldingen toestaan</CheckBox>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Over" Margin="0" Padding="10,5">
+                    <TextBlock>
+                        Dit is een voorbeeldapplicatie om TabControl te oefenen. Gebruik tabs om instellingen <Run>logisch te groeperen</Run>en het scherm 
+                        <LineBreak/>overzichtelijk te houden.
+                    </TextBlock>
+                </TabItem>
+            </TabControl>
         </Border>
     </Grid>
 </Page>
