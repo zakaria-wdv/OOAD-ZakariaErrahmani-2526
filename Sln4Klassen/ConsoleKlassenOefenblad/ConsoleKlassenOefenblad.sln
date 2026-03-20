@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.3.11520.95 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVcardEditor", "WpfVcardEditor\WpfVcardEditor.csproj", "{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleKlassenOefenblad", "ConsoleKlassenOefenblad.csproj", "{95A38F5F-3623-E823-4CE2-AFBD76DB0510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A38F5F-3623-E823-4CE2-AFBD76DB0510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A38F5F-3623-E823-4CE2-AFBD76DB0510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A38F5F-3623-E823-4CE2-AFBD76DB0510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A38F5F-3623-E823-4CE2-AFBD76DB0510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {268DBB17-8869-4E75-BCD8-560270148A30}
+		SolutionGuid = {47C22D90-A105-48FF-987A-00F2962F12F6}
 	EndGlobalSection
 EndGlobal
