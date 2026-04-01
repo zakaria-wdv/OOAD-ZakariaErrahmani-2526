@@ -9,26 +9,16 @@ internal class Ex05EnumConversie
         Console.WriteLine("\nOefening 5: enum conversies");
         Console.WriteLine("-------------");
 
-        // 1. Maak in "Exercises/Classes" een enum "Prioriteit" met deze waarden:
-        //  - Laag
-        //  - Normaal
-        //  - Hoog
-        //  - Kritiek
-        //
-        //  Test daarna:
-        //  - een enumwaarde tonen als tekst
-        //  - dezelfde enumwaarde omzetten naar int
-        //  - een int omzetten naar enum
+        Console.WriteLine("\nOefening 5: enum conversies");
+        Console.WriteLine("-------------");
 
-        // Testcode (haal uit commentaar):
+        Prioriteit p1 = Prioriteit.Hoog;
+        Console.WriteLine($"Enumwaarde: {p1}");
 
-        //Prioriteit p1 = Prioriteit.Hoog;
-        //Console.WriteLine($"Enumwaarde: {p1}");
+        int cijfer = (int)p1;
+        Console.WriteLine($"Als int: {cijfer}");
 
-        //int cijfer = (int)p1;
-        //Console.WriteLine($"Als int: {cijfer}");
-
-        //Prioriteit p2 = p1 + 1;
-        //Console.WriteLine($"Nog hogere prioriteit: {p2}");
+        Prioriteit p2 = p1 + 1;
+        Console.WriteLine($"Nog hogere prioriteit: {p2}");
     }
 }
