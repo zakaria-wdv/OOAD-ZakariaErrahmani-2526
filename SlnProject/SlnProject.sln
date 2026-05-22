@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.3.11520.95
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVcardEditor", "WpfVcardEditor\WpfVcardEditor.csproj", "{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DokterspraktijkLib", "DokterspraktijkLib\DokterspraktijkLib.csproj", "{7B2E56D5-30CA-43D2-9114-9E7F84786781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEscapeGame", "WpfEscapeGame\WpfEscapeGame.csproj", "{81E19FBF-713F-4C1C-8724-D0E9749B1B86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDokter", "WPFDokter\WPFDokter.csproj", "{8D65FA15-FCD0-42BB-8EB2-135A1184D740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoktersPraktijk", "DoktersPraktijk\DoktersPraktijk.csproj", "{1AD8A42F-C6AA-4077-AF0F-A5762441816F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPatient", "WPFPatient\WPFPatient.csproj", "{B0D58C46-7CE6-4A6F-B158-C8F4207DEBD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C3C02B4-F222-4A50-8F19-8E98E2FDAAF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2E56D5-30CA-43D2-9114-9E7F84786781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2E56D5-30CA-43D2-9114-9E7F84786781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2E56D5-30CA-43D2-9114-9E7F84786781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2E56D5-30CA-43D2-9114-9E7F84786781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D65FA15-FCD0-42BB-8EB2-135A1184D740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D65FA15-FCD0-42BB-8EB2-135A1184D740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D65FA15-FCD0-42BB-8EB2-135A1184D740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D65FA15-FCD0-42BB-8EB2-135A1184D740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D58C46-7CE6-4A6F-B158-C8F4207DEBD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D58C46-7CE6-4A6F-B158-C8F4207DEBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D58C46-7CE6-4A6F-B158-C8F4207DEBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D58C46-7CE6-4A6F-B158-C8F4207DEBD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

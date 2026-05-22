@@ -1,0 +1,41 @@
+<Page x:Class="WPFPatient.Pages.AfsprakenOverzichtPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Mijn Afspraken" Background="White">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Mijn Afspraken" FontSize="24" FontWeight="Bold" 
+                       Foreground="#1F1F1F" VerticalAlignment="Center"/>
+            <Button x:Name="btnNieuw" Content="+ Nieuwe afspraak" Click="btnNieuw_Click"
+                    Background="#1F1F1F" Foreground="White" Padding="15,8" 
+                    BorderThickness="0" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <TextBlock Grid.Row="1" Text="Selecteer een afspraak om de details te zien:" 
+                   FontSize="13" Margin="0,0,0,10"/>
+
+        <!-- ListBox voor de afspraken -->
+        <ListBox Grid.Row="2" x:Name="lstAfspraken" FontSize="13"
+                 SelectionChanged="lstAfspraken_SelectionChanged"/>
+
+        <TextBlock Grid.Row="3" Text="Reden voor consultatie:" FontWeight="Bold" Margin="0,15,0,5"/>
+        <TextBlock Grid.Row="4" x:Name="txtReden" TextWrapping="Wrap" 
+                   Background="#F0F0F0" Padding="10" MinHeight="50"/>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <TextBlock x:Name="txtFoutmelding" Foreground="Red" VerticalAlignment="Center" Margin="0,0,15,0"/>
+            <Button x:Name="btnAnnuleren" Content="Annuleren" Click="btnAnnuleren_Click"
+                    Background="#B91C1C" Foreground="White" Padding="15,8" 
+                    BorderThickness="0" IsEnabled="False"/>
+        </StackPanel>
+    </Grid>
+</Page>

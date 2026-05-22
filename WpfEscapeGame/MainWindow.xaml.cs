@@ -311,4 +311,4 @@ namespace WpfEscapeGame
                 lstMyItems.Items.Add(itm);
         }
     }
-}   
+}

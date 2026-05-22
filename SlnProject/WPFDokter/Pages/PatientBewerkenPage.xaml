@@ -1,0 +1,93 @@
+<Page x:Class="WPFDokter.Pages.PatientBewerkenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Patient Bewerken" Background="White">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" x:Name="txtTitel" Text="Nieuwe Patiënt" 
+                       FontSize="24" FontWeight="Bold" Foreground="#1F1F1F" Margin="0,0,0,20"/>
+
+            <Grid Grid.Row="1" MaxWidth="700" HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Foto sectie links -->
+                <StackPanel Grid.Column="0">
+                    <Border Width="150" Height="150" CornerRadius="75" 
+                            Background="#E2E8F0" ClipToBounds="True"
+                            HorizontalAlignment="Left">
+                        <Image x:Name="imgFoto" Stretch="UniformToFill"/>
+                    </Border>
+                    <Button Content="Foto kiezen..." Click="btnKiesFoto_Click"
+                            Background="#2D2D2D" Foreground="White" Padding="10,5" 
+                            BorderThickness="0" Margin="0,10,0,0" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <!-- Formulier rechts -->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Voornaam *" FontSize="13" Margin="0,5"/>
+                    <TextBox x:Name="txtVoornaam" FontSize="14" Padding="6"/>
+
+                    <TextBlock Text="Achternaam *" FontSize="13" Margin="0,10,0,5"/>
+                    <TextBox x:Name="txtAchternaam" FontSize="14" Padding="6"/>
+
+                    <TextBlock Text="Geslacht *" FontSize="13" Margin="0,10,0,5"/>
+                    <ComboBox x:Name="cboGeslacht" FontSize="14" Padding="6">
+                        <ComboBoxItem Content="Man"/>
+                        <ComboBoxItem Content="Vrouw"/>
+                        <ComboBoxItem Content="X"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Geboortedatum *" FontSize="13" Margin="0,10,0,5"/>
+                    <DatePicker x:Name="dpGeboortedatum" FontSize="14"/>
+
+                    <TextBlock Text="GSM" FontSize="13" Margin="0,10,0,5"/>
+                    <TextBox x:Name="txtGsm" FontSize="14" Padding="6" MaxLength="10"/>
+
+                    <TextBlock Text="Email *" FontSize="13" Margin="0,10,0,5"/>
+                    <TextBox x:Name="txtEmail" FontSize="14" Padding="6"/>
+
+                    <TextBlock Text="Wachtwoord *" FontSize="13" Margin="0,10,0,5"/>
+                    <PasswordBox x:Name="txtPaswoord" FontSize="14" Padding="6"/>
+                    <TextBlock x:Name="txtPaswoordHint" FontSize="11" Foreground="#718096" 
+                               Text="(Laat leeg om het huidige wachtwoord te behouden)"
+                               Visibility="Collapsed"/>
+
+                    <TextBlock Text="Notificaties *" FontSize="13" Margin="0,10,0,5"/>
+                    <ComboBox x:Name="cboNotificaties" FontSize="14" Padding="6">
+                        <ComboBoxItem Content="Geen"/>
+                        <ComboBoxItem Content="Mail"/>
+                        <ComboBoxItem Content="Sms"/>
+                        <ComboBoxItem Content="Beide"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+
+            <!-- Foutmelding -->
+            <TextBlock Grid.Row="2" x:Name="txtFoutmelding" Foreground="Red" 
+                       Margin="0,15,0,0" TextWrapping="Wrap"/>
+
+            <!-- Knoppen -->
+            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,20,0,20">
+                <Button Content="← Terug" Click="btnTerug_Click"
+                        Background="#718096" Foreground="White" Padding="15,8" 
+                        BorderThickness="0" Margin="0,0,10,0"/>
+                <Button x:Name="btnOpslaan" Content="Opslaan" Click="btnOpslaan_Click"
+                        Background="#1F1F1F" Foreground="White" Padding="15,8" 
+                        BorderThickness="0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,72 @@
+<Page x:Class="WPFPatient.Pages.NieuweAfspraakPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Nieuwe Afspraak" Background="White">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Nieuwe Afspraak Maken" 
+                   FontSize="24" FontWeight="Bold" Foreground="#1F1F1F" Margin="0,0,0,20"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Linker kolom: lijst van dokters -->
+            <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                <TextBlock Text="1. Kies een dokter:" FontWeight="Bold" Margin="0,0,0,10"/>
+                <ListBox x:Name="lstDokters" Height="200" 
+                         SelectionChanged="lstDokters_SelectionChanged"/>
+
+                <!-- Dokter info onder de lijst -->
+                <Border Background="#F0F0F0" Padding="10" Margin="0,15,0,0">
+                    <StackPanel>
+                        <TextBlock x:Name="txtDokterNaam" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtDokterEmail" FontSize="12" Margin="0,5,0,0"/>
+                        <TextBlock x:Name="txtDokterGsm" FontSize="12"/>
+                        <TextBlock x:Name="txtDokterRiziv" FontSize="12"/>
+                        <TextBlock x:Name="txtDokterGeconv" FontSize="12"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <!-- Rechter kolom: datum en uur kiezen + reden -->
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="2. Kies een datum en tijd:" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <DatePicker Grid.Column="0" x:Name="dpDatum" FontSize="14" Margin="0,0,10,0"/>
+                    <ComboBox Grid.Column="1" x:Name="cboTijd" FontSize="14"/>
+                </Grid>
+
+                <TextBlock Text="3. Reden voor consultatie:" FontWeight="Bold" Margin="0,20,0,10"/>
+                <TextBox x:Name="txtReden" FontSize="14" Padding="6" 
+                         Height="100" TextWrapping="Wrap" AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+        </Grid>
+
+        <TextBlock Grid.Row="2" x:Name="txtFoutmelding" Foreground="Red" 
+                   Margin="0,15,0,0" TextWrapping="Wrap"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,15,0,0">
+            <Button Content="← Terug" Click="btnTerug_Click"
+                    Background="#6B7280" Foreground="White" Padding="15,8" 
+                    BorderThickness="0" Margin="0,0,10,0"/>
+            <Button x:Name="btnBevestigen" Content="Bevestigen" Click="btnBevestigen_Click"
+                    Background="#1F1F1F" Foreground="White" Padding="15,8" 
+                    BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+</Page>
