@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfVcardEditor", "WpfVcardE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEscapeGame", "WpfEscapeGame\WpfEscapeGame.csproj", "{81E19FBF-713F-4C1C-8724-D0E9749B1B86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoktersPraktijk", "DoktersPraktijk\DoktersPraktijk.csproj", "{1AD8A42F-C6AA-4077-AF0F-A5762441816F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81E19FBF-713F-4C1C-8724-D0E9749B1B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD8A42F-C6AA-4077-AF0F-A5762441816F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

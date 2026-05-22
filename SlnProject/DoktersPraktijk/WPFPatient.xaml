@@ -16,10 +16,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Header bovenaan + titel, (na inloggen) naam + foto van dokter -->
+        <!-- Header bovenaan + titel, (na inloggen) naam + foto van patiënt -->
         <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#1F1F1F" Padding="20,10">
             <Grid>
-                <TextBlock Text="Dokterspraktijk - Dokter Portaal" 
+                <TextBlock Text="Dokterspraktijk - Patiënt Portaal" 
                    Foreground="White" FontSize="22" FontWeight="Bold"
                    VerticalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
@@ -32,7 +32,7 @@
                 </StackPanel>
             </Grid>
         </Border>
-        
+
         <!-- Linker navigatie balk met knoppen -->
         <Border Grid.Row="1" Grid.Column="0" Background="#2D2D2D">
             <StackPanel Margin="10">
@@ -45,7 +45,7 @@
                 <Button x:Name="btnAfspraken" Content="Afspraken" Click="btnAfspraken_Click"
                  Height="50" Margin="0,5" FontSize="14" Background="#1F1F1F"
                  Foreground="White" BorderThickness="0" IsEnabled="False"/>
-                <Button x:Name="btnPatienten" Content="Patiënten" Click="btnPatienten_Click"
+                <Button x:Name="btnProfiel" Content="Profiel" Click="btnProfiel_Click"
                  Height="50" Margin="0,5" FontSize="14" Background="#1F1F1F"
                  Foreground="White" BorderThickness="0" IsEnabled="False"/>
                 <Button x:Name="btnUitloggen" Content="Uitloggen" Click="btnUitloggen_Click"
@@ -53,9 +53,9 @@
                  Foreground="White" BorderThickness="0" IsEnabled="False"/>
             </StackPanel>
         </Border>
-        
+
         <!-- Hoofd frame waarin we de verschillende pagina's laden -->
         <Frame x:Name="mainFrame" Grid.Row="1" Grid.Column="1" 
-       NavigationUIVisibility="Hidden" Background="White"/>
+           NavigationUIVisibility="Hidden" Background="White"/>
     </Grid>
 </Window>
