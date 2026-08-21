@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\appartement-blok.jpg" />
+    <None Remove="Assets\appartement-herenhuis.jpg" />
+    <None Remove="Assets\appartement-klein.jpg" />
+    <None Remove="Assets\appartement-kust.jpg" />
+    <None Remove="Assets\appartement-kust2.jpg" />
+    <None Remove="Assets\appartement-luxe.jpg" />
+    <None Remove="Assets\appartement-nieuwbouw.jpg" />
+    <None Remove="Assets\appartement-randstad.jpg" />
+    <None Remove="Assets\huis-arbeider.jpg" />
+    <None Remove="Assets\huis-hoek.jpg" />
+    <None Remove="Assets\huis-hoek2.jpg" />
+    <None Remove="Assets\huis-landelijk.jpg" />
+    <None Remove="Assets\huis-landelijk2.jpg" />
+    <None Remove="Assets\huis-modern.jpg" />
+    <None Remove="Assets\huis-modern2.jpg" />
+    <None Remove="Assets\huis-oud.jpg" />
+    <None Remove="Assets\huis-vrijstaand.jpg" />
+    <None Remove="Assets\huis-wit.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\appartement-blok.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-herenhuis.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-klein.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-kust.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-kust2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-luxe.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-nieuwbouw.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\appartement-randstad.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-arbeider.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-hoek.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-hoek2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-landelijk.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-landelijk2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-modern.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-modern2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-oud.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-vrijstaand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\huis-wit.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CLImmo\CLImmo.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfImmo.NieuwPandWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nieuw pand toevoegen" Height="560" Width="420"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+
+    <ScrollViewer Margin="16" VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+
+            <TextBlock Text="Type" FontWeight="Bold"/>
+            <ComboBox x:Name="TypeComboBox" Margin="0,4,0,12"
+                      SelectionChanged="TypeComboBox_SelectionChanged"/>
+
+            <TextBlock Text="Adres" FontWeight="Bold"/>
+            <TextBox x:Name="AdresTextBox" Margin="0,4,0,12"/>
+
+            <TextBlock Text="Prijs (€)" FontWeight="Bold"/>
+            <TextBox x:Name="PrijsTextBox" Margin="0,4,0,12"/>
+
+            <TextBlock Text="Oppervlakte (m²)" FontWeight="Bold"/>
+            <TextBox x:Name="OppervlakteTextBox" Margin="0,4,0,12"/>
+
+            <TextBlock Text="Bouwjaar" FontWeight="Bold"/>
+            <TextBox x:Name="BouwjaarTextBox" Margin="0,4,0,12"/>
+
+            <TextBlock Text="Energielabel" FontWeight="Bold"/>
+            <ComboBox x:Name="EnergielabelComboBox" Margin="0,4,0,12"/>
+
+            <TextBlock Text="Makelaar" FontWeight="Bold"/>
+            <ComboBox x:Name="MakelaarComboBox" Margin="0,4,0,12"/>
+
+            <!-- Enkel zichtbaar bij type Huis -->
+            <StackPanel x:Name="TuinPanel">
+                <TextBlock Text="Tuinoppervlakte (m²)" FontWeight="Bold"/>
+                <TextBox x:Name="TuinTextBox" Margin="0,4,0,12"/>
+            </StackPanel>
+
+            <!-- Enkel zichtbaar bij type Appartement -->
+            <StackPanel x:Name="LiftPanel" Visibility="Collapsed">
+                <CheckBox x:Name="LiftCheckBox" Content="Heeft lift" Margin="0,4,0,12"/>
+            </StackPanel>
+
+            <TextBlock Text="Foto-bestandsnaam (optioneel)" FontWeight="Bold"/>
+            <TextBox x:Name="FotoTextBox" Margin="0,4,0,4"/>
+            <TextBlock Text="Bv. huis-modern.jpg — laat leeg als er geen foto is."
+                       Foreground="Gray" FontSize="11" Margin="0,0,0,12" TextWrapping="Wrap"/>
+
+            <TextBlock x:Name="FoutTextBlock" Foreground="Red" TextWrapping="Wrap" Margin="0,0,0,12"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Annuleren" Padding="12,6" Margin="0,0,8,0" Click="AnnulerenButton_Click"/>
+                <Button Content="Opslaan" Padding="12,6" Click="OpslaanButton_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>

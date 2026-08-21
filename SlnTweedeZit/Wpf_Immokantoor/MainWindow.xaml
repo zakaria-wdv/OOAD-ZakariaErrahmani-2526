@@ -1,0 +1,129 @@
+﻿<Window x:Class="WpfImmo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:conv="clr-namespace:WpfImmo.Converters"
+        xmlns:models="clr-namespace:CLImmo.Models;assembly=CLImmo"
+        Title="ImmoKantoor" Height="750" Width="1250" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <conv:FotoConverter x:Key="FotoConverter"/>
+        <conv:TypeZichtbaarheidConverter x:Key="TypeZichtbaarheidConverter"/>
+        <conv:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+        <BooleanToVisibilityConverter x:Key="BoolNaarZichtbaarheid"/>
+    </Window.Resources>
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Filterbalk -->
+        <Border Grid.Row="0" Background="#F3F3F3" CornerRadius="6" Padding="10" Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Energielabel:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <ComboBox Grid.Column="1" x:Name="EnergielabelFilterComboBox" Width="100" Margin="0,0,16,0"
+                          SelectionChanged="FilterGewijzigd"/>
+
+                <TextBlock Grid.Column="2" Text="Makelaar:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <ComboBox Grid.Column="3" x:Name="MakelaarFilterComboBox" Width="170" Margin="0,0,16,0"
+                          SelectionChanged="FilterGewijzigd"/>
+
+                <CheckBox Grid.Column="4" x:Name="EnkelTeKoopCheckBox" Content="Enkel te koop"
+                          VerticalAlignment="Center"
+                          Checked="EnkelTeKoopGewijzigd" Unchecked="EnkelTeKoopGewijzigd"/>
+
+                <Button Grid.Column="5" Content="+ Nieuw pand" Padding="14,6" Click="NieuwPandButton_Click"/>
+            </Grid>
+        </Border>
+
+        <!-- Galerij + details -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Galerij -->
+            <ListBox Grid.Column="0" x:Name="GalerijListBox" Margin="0,0,10,0" BorderThickness="0"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      SelectionChanged="GalerijListBox_SelectionChanged">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="{x:Type models:Pand}">
+                        <Border Width="210" Margin="6" CornerRadius="8" Background="White"
+                                BorderBrush="#DDDDDD" BorderThickness="1">
+                            <StackPanel>
+                                <Grid>
+                                    <Image Source="{Binding Foto, Converter={StaticResource FotoConverter}}"
+                                           Height="130" Stretch="UniformToFill"/>
+                                    <Border Background="#CC000000" VerticalAlignment="Top"
+                                            Visibility="{Binding IsVerkocht, Converter={StaticResource BoolNaarZichtbaarheid}}">
+                                        <TextBlock Text="VERKOCHT" Foreground="White" FontWeight="Bold"
+                                                   HorizontalAlignment="Center" Padding="0,4"/>
+                                    </Border>
+                                </Grid>
+                                <StackPanel Margin="8">
+                                    <TextBlock Text="{Binding Adres}" FontWeight="Bold" TextWrapping="Wrap"/>
+                                    <TextBlock Text="{Binding Prijs, StringFormat='€ {0:N0}'}" Margin="0,2,0,0"/>
+                                    <TextBlock Text="{Binding Energielabel, StringFormat='Label: {0}'}"
+                                               Margin="0,2,0,0" Foreground="Gray" FontSize="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <!-- Details -->
+            <Border Grid.Column="1" x:Name="DetailPanel" Background="#F9F9F9" CornerRadius="6" Padding="16">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <Image Source="{Binding Foto, Converter={StaticResource FotoConverter}}"
+                               Height="220" Stretch="UniformToFill" Margin="0,0,0,12"/>
+
+                        <TextBlock Text="{Binding Adres}" FontSize="20" FontWeight="Bold" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Type}" Foreground="Gray" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="{Binding Prijs, StringFormat='Prijs: € {0:N0}'}" Margin="0,2"/>
+                        <TextBlock Text="{Binding PrijsPerVierkanteMeter, StringFormat='Prijs per m²: € {0:N2}'}" Margin="0,2"/>
+                        <TextBlock Text="{Binding Oppervlakte, StringFormat='Oppervlakte: {0} m²'}" Margin="0,2"/>
+                        <TextBlock Text="{Binding Bouwjaar, StringFormat='Bouwjaar: {0}'}" Margin="0,2"/>
+                        <TextBlock Text="{Binding Ouderdom, StringFormat='Ouderdom: {0} jaar'}" Margin="0,2"/>
+                        <TextBlock Text="{Binding Energielabel, StringFormat='Energielabel: {0}'}" Margin="0,2"/>
+
+                        <StackPanel Visibility="{Binding Type, Converter={StaticResource TypeZichtbaarheidConverter}, ConverterParameter=Huis}">
+                            <TextBlock Text="{Binding Tuinoppervlakte, StringFormat='Tuinoppervlakte: {0} m²'}" Margin="0,2"/>
+                        </StackPanel>
+
+                        <StackPanel Visibility="{Binding Type, Converter={StaticResource TypeZichtbaarheidConverter}, ConverterParameter=Appartement}">
+                            <TextBlock Text="{Binding HeeftLift, StringFormat='Lift: {0}'}" Margin="0,2"/>
+                        </StackPanel>
+
+                        <TextBlock Margin="0,10,0,0" FontWeight="Bold" Foreground="DarkRed"
+                                   Text="{Binding DatumVerkocht, StringFormat='Verkocht op {0:dd/MM/yyyy}'}"
+                                   Visibility="{Binding IsVerkocht, Converter={StaticResource BoolNaarZichtbaarheid}}"/>
+
+                        <Button Content="Markeer verkocht" Margin="0,16,0,0" Padding="10,6"
+                                HorizontalAlignment="Left"
+                                Click="MarkeerVerkochtButton_Click"
+                                IsEnabled="{Binding IsVerkocht, Converter={StaticResource InverseBooleanConverter}}"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
